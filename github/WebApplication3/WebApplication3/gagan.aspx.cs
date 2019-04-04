@@ -11,7 +11,16 @@ namespace WebApplication3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(!Page.IsPostBack)
+            {
+                ltMessage.Text = "Welcome to the gagan page";
+                ltMessage.Text = "You are under my control now";
+            }
+        }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            string email = TextBox1.Text;
         }
     }
 }
